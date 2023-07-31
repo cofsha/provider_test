@@ -44,3 +44,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Start release build
         run: flutter build appbundle
+      
+      - uses: actions/upload-artifact@v2
+        with:
+          name: apk
+          path: build/app/outputs/flutter-apk/app-release.apk
